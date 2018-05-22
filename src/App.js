@@ -14,8 +14,8 @@ class App extends Component {
   }
 }
 
-Counter.propTypes = {
-  children: PropTypes.array
+App.propTypes = {
+  children: PropTypes.element.isRequired
 };
 
 export default App;
