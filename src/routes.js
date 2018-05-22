@@ -6,8 +6,9 @@ import Home from './components/Home';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={Home} />
+    <IndexRoute component={Counter} />
     <Route path="home" component={Home} />
+    {/* <Route component={Music} path="/Musik" /> */}
     <Route path="counter" component={Counter} />
 
   </Route>
