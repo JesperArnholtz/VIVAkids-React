@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-sass-starterkit",
+  "name": "VIVAkids-React",
   "version": "1.1.0",
-  "description": "Everything you need to get started with a basic React application",
+  "description": "VIVAs nye hjemmeside lavet i react med contentful",
   "watch": true,
   "dependencies": {
     "prop-types": "^15.6.1",
@@ -33,7 +33,7 @@
     "webpack-dev-server": "^2.11.2"
   },
   "scripts": {
-    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "build": "webpack",
     "watch": "webpack --watch",
     "lint": "./node_modules/.bin/eslint ./src"
