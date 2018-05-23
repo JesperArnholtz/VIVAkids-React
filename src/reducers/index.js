@@ -3,10 +3,14 @@ import { combineReducers } from "redux";
 
 
 import NavigationReducer from './navigationReducer';
+import BlogsReducer from './blogsReducer';
+import AssetsReducer from './assetReducer';
 import count from "./counter";
 // import secondCounter from './exampleReducer';
 
 export default combineReducers({ 
+    blogs: BlogsReducer,
+    assets: AssetsReducer,
     count,
     links: NavigationReducer
 });
