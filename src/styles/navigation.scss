@@ -1,4 +1,7 @@
 
+body{ 
+    background:red !important;
+}
 
 .st-menu-open .st-pusher::after {
 	width: 100%;
@@ -18,11 +21,11 @@
 	height: 100%;
 	background: #48a770;
 	-webkit-transition: all 0.5s;
-	transition: all 0.5s; 
+	transition: all 0.5s;  
 }
 
 .st-menu::after { 
-	position: absolute;
+	position: absolute;  
 	top: 0;
 	right: 0;
 	width: 100%;

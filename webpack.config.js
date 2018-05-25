@@ -1,11 +1,12 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: ["./src/index.js", 
-    "./src/styles/navigation.scss",
-    "./src/styles/main.scss"
+    // "./src/styles/navigation.scss",
+    // "./src/styles/main.scss"
   ],
   // entry: {
   //   'bundle.css': [
@@ -43,11 +44,15 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: "./public/",
+    contentBase: path.join(__dirname, "public"),
     watchContentBase: true
   },
   plugins: [
     new ExtractTextPlugin("bundle.css"),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: "./public/index.html"
+      }),
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
