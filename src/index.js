@@ -9,6 +9,9 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './App';
 //import store from './store';
 
+import './styles/main.scss';
+import './styles/navigation.scss';
+
 import reducers from './reducers';
 import routes from './routes';
 

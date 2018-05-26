@@ -22,10 +22,15 @@ class Header extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-default">
-        <IndexLink to="/" activeClassName="active">Home</IndexLink>
-        {this.renderLinks()}
-      </nav>
+      <div>
+        <button className="push-button" data-effect="st-effect-3">Push</button>
+        <button data-effect="st-effect-11">Scale &amp; rotate pusher</button>
+        <nav className="st-menu st-effect-11" id="menu-11">
+          <IndexLink to="/" activeClassName="active">Home</IndexLink>
+          {this.renderLinks()}
+        </nav>
+      </div>
+
     );
   }
 };

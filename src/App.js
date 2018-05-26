@@ -6,9 +6,15 @@ import Header from './components/Header';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id="st-container" className="st-container">
         <Header />
-        {this.props.children}
+        <div className="st-pusher">
+          <div className="st-content">
+            <div className="st-content-inner">
+              {this.props.children}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
