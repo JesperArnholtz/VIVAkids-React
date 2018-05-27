@@ -45,7 +45,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "public"),
-    watchContentBase: true
+    watchContentBase: true,
+    historyApiFallback: true
   },
   plugins: [
     new ExtractTextPlugin("bundle.css"),

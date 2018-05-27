@@ -5,7 +5,7 @@ import { fetchMusic } from '../actions/musicActions';
 import Asset from './asset';
 
 class Music extends Component {
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this.props.fetchMusic();
     }
     renderMusic() {

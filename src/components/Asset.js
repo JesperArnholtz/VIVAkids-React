@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { fetchAsset } from '../actions/blogActions';
 
 class Asset extends Component {
-  componentWillMount() {
-    this.props.fetchAsset(this.props.assetId)
+  UNSAFE_componentWillMount() {
+    this.props.fetchAsset(this.props.assetId);
   }
   renderAsset() {
     return this.props.assets.map((asset) => {
@@ -35,4 +35,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchAsset })(Asset)
+export default connect(mapStateToProps, { fetchAsset })(Asset);

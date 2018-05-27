@@ -18,10 +18,10 @@
       "react"
   ],
   "rules": {
-      "react/jsx-indent": [
-        "error",
-        2
-      ],
+    //   "react/jsx-indent": [
+    //     "error",
+    //     2
+    //   ],
     // "linebreak-style": [
     //       "error",
     //       "unix"

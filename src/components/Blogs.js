@@ -5,7 +5,7 @@ import { fetchPosts } from '../actions/blogActions';
 import Asset from './asset';
 
 class Blogs extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.fetchPosts();
   }
   renderPosts() {

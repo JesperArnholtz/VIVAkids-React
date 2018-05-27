@@ -6,31 +6,28 @@ import { connect } from "react-redux";
 
 
 class Header extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.fetchMainLinks();
   }
   renderLinks() {
-    // console.table(this.props)
     return this.props.links.map((link, index) => {
       return (
-        <span key={link.sys.id}>
-          {" | "}
-          <Link to={link.fields.link} activeClassName="active">{link.fields.link}</Link>
-        </span>
+        <Link key={link.sys.id} to={link.fields.link} onClick={this.closeNav} activeClassName="active">{link.fields.link}</Link>
       );
     });
   }
+
+  closeNav(){ 
+		let container = document.querySelector('.st-container');
+		container.classList.contains('st-menu-open') ? container.classList.remove('st-menu-open', 'st-effect-3') : '';
+  }
+
   render() {
     return (
-      <div>
-        <button className="push-button" data-effect="st-effect-3">Push</button>
-        <button data-effect="st-effect-11">Scale &amp; rotate pusher</button>
-        <nav className="st-menu st-effect-11" id="menu-11">
-          <IndexLink to="/" activeClassName="active">Home</IndexLink>
-          {this.renderLinks()}
-        </nav>
-      </div>
-
+      < nav className="st-menu st-effect-3" id="menu-3" >
+        <IndexLink to="/" onClick={this.closeNav} activeClassName="active">Home</IndexLink>
+        {this.renderLinks()}
+      </nav >
     );
   }
 };
